@@ -1,0 +1,14 @@
+Generates language info HTML pages for the CLARIN Virtual Language Observatory.
+
+== Requirements
+This software was tested with Python 3.4 only.
+
+== To install
+Use the standard setuptools installation routine on `setup.py`.
+
+== To run
+
+[source,Sh]
+----
+python -m 'generate_language_info_pages'
+----
