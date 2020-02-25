@@ -36,34 +36,31 @@
                     <a href='http://www.endangeredlanguages.com/lang/${iso639}'>Endangered Languages Project entry</a>
                 </p>
             % endif
-            <p>
-                <a href="http://www.ethnologue.com/show_language.asp?code=${iso639}">Ethnologue entry</a>
-            </p>
 
             ## <p><a href="http://www.llmap.org/languages/${iso639}.html">LinguistList Map</a></p>
 
             <p><a href="http://new.multitree.org/trees/code/${iso639}">MultiTree genealogical position</a></p>
 
             <p>
-                <a href="http://www-01.sil.org/iso639-3/documentation.asp?id=${iso639}">SIL language documentation</a>
+                <a href="https://iso639-3.sil.org/code/${iso639}">SIL language documentation</a>
             </p>
 
             <p>
                 <a href="https://vlo.clarin.eu/?fq=languageCode:code:${iso639}">Virtual Language Observatory records</a>
             </p>
 
-            <p><a href="http://en.wikipedia.org/wiki/ISO_639:${iso639}">Wikipedia article</a></p>
+            <p><a href="https://en.wikipedia.org/wiki/ISO_639:${iso639}">English Wikipedia article</a></p>
 
             <em>By other typologies</em>
 
             <p>
-                <a href="http://glottolog.org/glottolog?alnum=${glottolog}">Glottolog catalogue entry for ‘${glottolog}’</a>
+                <a href="https://glottolog.org/resource/languoid/id/${glottolog}">Glottolog catalogue entry for ‘${glottolog}’</a>
             </p>
             % if wals == '':
                 <p>No WALS record found.</p>
             % else:
                 <p>
-                    <a href="http://wals.info/languoid/lect/wals_code_${wals}">World Atlas of Language Structures record for ‘${wals}’</a>
+                    <a href="https://wals.info/languoid/lect/wals_code_${wals}">World Atlas of Language Structures record for ‘${wals}’</a>
                 </p>
             % endif
         </div>
