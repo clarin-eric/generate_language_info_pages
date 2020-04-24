@@ -1,0 +1,20 @@
+language: python
+python:
+  - "3.4"
+env:
+  - LANG_INFO_PAGES_TAR="lang_info_pages.tar.gz"
+script:
+  - sh -x "./ci-build.sh"
+before_deploy:
+  - sh -x "./ci-pre-deploy.sh"
+  - git config --local user.name "Travis CI"
+  - git config --local user.email "$COMMIT_AUTHOR_EMAIL"
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file: "${LANG_INFO_PAGES_TAR}"
+  overwrite: true
+  on:
+    tags: true
+  skip_cleanup: true

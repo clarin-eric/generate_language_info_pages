@@ -12,3 +12,14 @@ Use the standard setuptools installation routine on `setup.py`.
 ----
 python -m 'generate_language_info_pages'
 ----
+
+or (requires Docker):
+
+[source,Sh]
+----
+./docker-run.sh
+----
+
+== Deployment
+
+Primary deployment use case is serving of static output at `infra.clarin.eu`. See for example https://infra.clarin.eu/content/language_info/data/aaa.html

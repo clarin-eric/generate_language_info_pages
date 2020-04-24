@@ -11,6 +11,8 @@ from pathlib import Path
 from sys import stdout
 from tempfile import mkdtemp
 
+import os
+
 from mako.template import Template
 from requests import get
 from requests import Session
@@ -38,8 +40,7 @@ def process_language(resource, langs_http_conn_pool, output_dir_path: Path,
         with language_info_page_file_path.open(
                 mode='wt', encoding='utf-8') as language_info_page_file:
             info(
-                'Written language info page {'
-                'language_info_page_file_path}'.format(
+                'Written language info page {language_info_page_file_path}'.format(
                     language_info_page_file_path=language_info_page_file_path))
             language_info_page_file.write(
                 template.render(
@@ -59,7 +60,7 @@ def main():
     template = Template(
         filename='data/language_info.template.html', input_encoding='utf-8')
 
-    output_dir_path = Path(mkdtemp(prefix='langinfo_'))
+    output_dir_path = Path('/tmp/')
 
     warning("Creating language info pages in '{output_dir_path}'.".format(
         output_dir_path=output_dir_path))

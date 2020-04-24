@@ -2,7 +2,7 @@
 from setuptools import setup
 
 __author__ = 'Sander Maijers <sander@clarin.eu>'
-__version__ = '1.0.dev0'
+__version__ = '1.0.dev1'
 
 INSTALL_REQUIRES = ['Mako>1.0,<1.1', 'requests>2.6,<2.8']
 
