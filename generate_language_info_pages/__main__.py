@@ -54,7 +54,7 @@ def process_language(resource, langs_http_conn_pool, output_dir_path: Path,
 
 def main():
     glottlog_response = get(
-        'http://glottolog.org/resourcemap.json?rsc=language')
+        'http://glottolog.org/resourcemap.json?rsc=language', verify=False)
     glottolog_mapping = loads(glottlog_response.text)
 
     template = Template(
