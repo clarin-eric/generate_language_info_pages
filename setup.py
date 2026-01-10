@@ -4,7 +4,12 @@ from setuptools import setup
 __author__ = 'Sander Maijers <sander@clarin.eu>'
 __version__ = '1.0.dev1'
 
-INSTALL_REQUIRES = ['Mako>1.0,<1.1', 'requests>2.6,<2.8']
+INSTALL_REQUIRES = [
+	'Mako>1.0,<1.1', 
+	'requests>2.6,<2.8', 
+	'setuptools>68.0,<68.2', 
+	'markupsafe<1.2', 
+	'pip-system-certs']
 
 setup(
     author=__author__,
