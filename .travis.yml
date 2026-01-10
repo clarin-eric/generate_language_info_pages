@@ -1,6 +1,6 @@
 language: python
 python:
-  - "3.4"
+  - "3.7"
 env:
   - LANG_INFO_PAGES_TAR="lang_info_pages.tar.gz"
 script:
